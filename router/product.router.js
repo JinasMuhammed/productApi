@@ -43,7 +43,7 @@ proRoute.route('/:id').patch(function (req,res){
             data.title = req.body.title;
             data.image= req.body.imgae;
             data.price = req.body.price;
-            data.gst =req.body.gst;
+            data.category =req.body.category;
             data.description =req.body.description;
             data    
                 .save()
