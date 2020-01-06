@@ -34,6 +34,17 @@ proRoute.route('/:id').get(function (req,res){
    });
 });
 
+proRoute.route('/:category').get(function(req,res)
+                                  {
+    let category = req.params.category;
+    pro.find({ category:category}, function(err,data){
+        if(err){
+        throw err;
+        }else{
+        res.json(data);
+        }
+    });
+});
 proRoute.route('/:id').patch(function (req,res){
     let id =req.params.id;
     Pro.findById({ _id:id},function(err,data){
