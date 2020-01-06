@@ -17,7 +17,7 @@ console.log(err);
 orderRoute.route('/').post(function(req,res){
     let order = new Order(req.body);
 
-    orde
+    order
         .save()
         .then(obj=>{
             res.status(200).json({message:'order recived success fully'});
